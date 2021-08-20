@@ -12,11 +12,11 @@
         "http-errors": "~1.6.3",
         "mongoose": "^5.13.7",
         "morgan": "~1.9.1",
+        "nodemon": "^2.0.12",
         "pug": "2.0.0-beta11"
     },
     "description": "A barebones Node.js app using [Express 4](http://expressjs.com/).",
-    "main": "app.js",
-    "devDependencies": {},
+    "main": "./bin/www", 
     "repository": {
         "type": "git",
         "url": "git+https://github.com/heroku/node-js-getting-started.git"

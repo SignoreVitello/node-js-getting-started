@@ -31,6 +31,8 @@ app.use(logger("dev"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.json());
 
+app.use(cors());
+
 app.post("/api/register", async (req, res) => {
     console.log(req.body);
     res.json({ status: ok });

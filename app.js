@@ -48,7 +48,7 @@ app.post("/api/register", async (req, res) => {
             username,
             password,
         });
-        console.log("User has been created");
+        console.log("User has been created", response);
     } catch (error) {
         console.log(error);
         return res.json({ status: "error" });

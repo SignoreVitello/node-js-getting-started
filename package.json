@@ -6,6 +6,7 @@
         "start": "node ./bin/www"
     },
     "dependencies": {
+        "body-parser": "^1.18.3",
         "cookie-parser": "~1.4.4",
         "debug": "~2.6.9",
         "express": "~4.16.1",
@@ -16,7 +17,7 @@
         "pug": "2.0.0-beta11"
     },
     "description": "A barebones Node.js app using [Express 4](http://expressjs.com/).",
-    "main": "./bin/www", 
+    "main": "./bin/www",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/heroku/node-js-getting-started.git"

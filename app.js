@@ -5,7 +5,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const bodyParser = require("body-parser");
 
-var indexRouter = require("./routes/index");
+// var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const eventsRouter = require("./routes/events");
 
@@ -34,6 +34,19 @@ app.use(bodyParser.json());
 app.post("/api/register", async (req, res) => {
     console.log(req.body);
     res.json({ status: ok });
+
+    const { username, password: plainTextPassword } = req.body;
+
+    try {
+        const response = await User.create({
+            username,
+            password,
+        });
+        console.log("User has been created");
+    } catch (error) {
+        console.log(error);
+        return res.json({ status: "error" });
+    }
 });
 
 app.use("/", indexRouter);

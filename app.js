@@ -10,6 +10,9 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const eventsRouter = require("./routes/events");
 
+const User = require("./models/user");
+const Event = require("./models/event");
+
 var app = express();
 
 var mongoose = require("mongoose");
